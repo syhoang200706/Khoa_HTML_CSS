@@ -1,25 +1,71 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>F4 SHOP</title>
-    <meta charset="utf-8">
-    <style>
-      html, body {
-        margin: 0;
-      }
-      .header {
-        width: 100%;
-        height: 100vh;
-        background-image: 
-          linear-gradient(180deg, rgba(255,255,0,0.5), rgba(0,0,255,0.5)), 
-          url('https://images.unsplash.com/photo-1523275335684-37898b6baf30');
-        background-size: 80%;
-        background-repeat: no-repeat;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="header"></div>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - LEMOSY GHOAN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">DEV Fullstack </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="home-content">
+            <h1>Welcome to My World</h1>
+            <p>I’m LEMOSHY GHOAN, a Fullstack Developer specializing in HTML, CSS, JavaScript ,Java,C/C++, python , and SQL. With a passion for coding, I build scalable and user-friendly web applications.</p>
+            <img src="https://images.pexels.com/photos/4974922/pexels-photo-4974922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Coding Inspiration" class="home-img">
+            <div class="cta-buttons">
+                <a href="#projects"><button>Explore Projects</button></a>
+                <a href="HoangVanSy_CV.pdf" download><button>Download CV</button></a>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <img src="https://assets.grok.com/users/4634e229-3efa-4018-8a23-a578c4829207/generated/d1c05d2b-b924-4606-973b-407a069a2aae/image.jpg" alt="Hoàng Văn Sỹ" class="profile-img">
+            <p>My coding journey started with a curiosity about how websites work. Over time, I’ve developed numerous projects, mastering skills with dedication and creativity. I thrive on solving problems and learning new technologies.</p>
+            <h3>Skills</h3>
+            <ul class="skills-list">
+                <li>💻 HTML, CSS, JavaScript,Java,C/C++,Python</li>
+                <li>🗃️ MongoDB, PostgreSQL</li>
+                <li>🛠️ Git, VS Code</li>
+            </ul>
+            <h3>Experience</h3>
+            <p>Learned web for 3 weeks.</p>
+            <blockquote>"Simplicity is the soul of efficiency." – Austin Freeman</blockquote>
+            <div class="cta-buttons">
+                <a href="#projects"><button>View Projects</button></a>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="projects-content">
+            <h2>Projects</h2>
+            <p>Check out some of my recent work:</p>
+            <ul class="project-list">
+                <li><a href="#">https://github.com/syhoang200706</a> - hehe</li>
+            </ul>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-content">
+            <h2>Get in Touch</h2>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:hoangvansy.dev@email.com">hoangvansy.dev@email.com</a></p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/syhoang200706" target="_blank">github.com/syhoang200706</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+84987654321">+84 987 654 321</a></p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
 </html>
