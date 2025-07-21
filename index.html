@@ -1,71 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - LEMOSY GHOAN</title>
+    <title>LEMOSHY GHOAN - Fullstack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="parallax-bg"></div>
+    
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
     <header>
         <nav>
-            <div class="logo">DEV Fullstack </div>
-            <ul class="nav-links">
+            <a href="#" class="logo">LEMOSHY GHOAN</a>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
-    <section id="home">
-        <div class="home-content">
+
+    <section id="home" class="hero">
+        <div class="hero-content">
             <h1>Welcome to My World</h1>
-            <p>I’m LEMOSHY GHOAN, a Fullstack Developer specializing in HTML, CSS, JavaScript ,Java,C/C++, python , and SQL. With a passion for coding, I build scalable and user-friendly web applications.</p>
-            <img src="https://images.pexels.com/photos/4974922/pexels-photo-4974922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Coding Inspiration" class="home-img">
+            <p class="typewriter">I'm LEMOSHY GHOAN, a Fullstack Developer specializing in Website.</p>
+            <p>With a passion for coding, I build scalable and user-friendly web applications.</p>
             <div class="cta-buttons">
-                <a href="#projects"><button>Explore Projects</button></a>
-                <a href="HoangVanSy_CV.pdf" download><button>Download CV</button></a>
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-code"></i>
+                    Explore Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-download"></i>
+                    Download CV
+                </a>
             </div>
+            <p style="margin-top: 2rem; font-style: italic; color: var(--accent-color);">
+                "Coding Inspiration"
+            </p>
         </div>
     </section>
-    <section id="about">
+
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <h2>About Me</h2>
-            <img src="https://assets.grok.com/users/4634e229-3efa-4018-8a23-a578c4829207/generated/d1c05d2b-b924-4606-973b-407a069a2aae/image.jpg" alt="Hoàng Văn Sỹ" class="profile-img">
-            <p>My coding journey started with a curiosity about how websites work. Over time, I’ve developed numerous projects, mastering skills with dedication and creativity. I thrive on solving problems and learning new technologies.</p>
-            <h3>Skills</h3>
-            <ul class="skills-list">
-                <li>💻 HTML, CSS, JavaScript,Java,C/C++,Python</li>
-                <li>🗃️ MongoDB, PostgreSQL</li>
-                <li>🛠️ Git, VS Code</li>
-            </ul>
-            <h3>Experience</h3>
-            <p>Learned web for 3 weeks.</p>
-            <blockquote>"Simplicity is the soul of efficiency." – Austin Freeman</blockquote>
-            <div class="cta-buttons">
-                <a href="#projects"><button>View Projects</button></a>
+            <div class="about-image">
+                <img src="c:\Users\Admin\Pictures\z6827614550130_26ca345c740e234cd04e110e26c1d7c3.jpg" alt="Hoàng Văn Sỹ">
+            </div>
+            <div class="about-text">
+                <h3>Hoàng Văn Sỹ</h3>
+                <p>My coding journey started with a curiosity about how websites work. That small spark of interest led me to explore the world of web development, beginning with basic HTML and CSS. As I learned more, I found myself drawn to the logic behind JavaScript, the design flexibility of CSS, and the power of connecting front-end to back-end technologies.
+                    Over time, I've built various projects that challenged me to grow and refine my skills. Through dedication and creativity, I’ve developed a strong foundation in web development and problem-solving. Each challenge taught me something new—whether it was fixing a bug, improving performance, or creating a better user experience.
+                    I enjoy learning new technologies and staying updated with modern trends. What excites me the most is the endless opportunity to build useful, beautiful, and interactive things that others can enjoy. My journey is far from over, and I’m excited about what’s next.</p>
+                <p><strong>Experience:</strong> Studied web development for a month, quick learner and absorbing, good skills.</p>
+                <blockquote style="margin: 2rem 0; padding: 1rem; border-left: 3px solid var(--primary-color); background: #f8f8f8; font-style: italic;">
+                    "Simplicity is the soul of efficiency." – Austin Freeman
+                </blockquote>
             </div>
         </div>
     </section>
-    <section id="projects">
-        <div class="projects-content">
-            <h2>Projects</h2>
-            <p>Check out some of my recent work:</p>
-            <ul class="project-list">
-                <li><a href="#">https://github.com/syhoang200706</a> - hehe</li>
-            </ul>
+
+    <section class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h3>Frontend</h3>
+                <p>💻 HTML, CSS, JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-server"></i>
+                <h3>Backend</h3>
+                <p>Java, C/C++, Python</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>Database</h3>
+                <p>🗃️ MongoDB, PostgreSQL</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-tools"></i>
+                <h3>Tools</h3>
+                <p>🛠️ Git, VS Code</p>
+            </div>
         </div>
     </section>
-    <section id="contact">
-        <div class="contact-content">
-            <h2>Get in Touch</h2>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:hoangvansy.dev@email.com">hoangvansy.dev@email.com</a></p>
-            <p><i class="fab fa-github"></i> <a href="https://github.com/syhoang200706" target="_blank">github.com/syhoang200706</a></p>
-            <p><i class="fas fa-phone"></i> <a href="tel:+84987654321">+84 987 654 321</a></p>
+
+    <section class="section">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-timeline">
+            <div class="timeline-item">
+                <h3>Web Development Journey</h3>
+                <p><strong>Duration:</strong> One month of intensive learning</p>
+                <p>Started my coding journey with curiosity about how websites work. Dedicated myself to mastering web technologies through hands-on projects and continuous learning.</p>
+            </div>
         </div>
     </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">Check out some of my recent work:</p>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <a href="https://github.com/syhoang200706" class="btn btn-primary">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive portfolio website showcasing my skills and projects. Built with HTML, CSS, and JavaScript with modern animations and effects.</p>
+                    <a href="https://github.com/syhoang200706" target="_blank">github.com/syhoang200706</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Coming Soon</h3>
+                    <p>More exciting projects are on the way! Stay tuned for updates on my latest developments and innovations.</p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="#projects" class="btn btn-secondary">
+                <i class="fas fa-eye"></i>
+                View Projects
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>syhoang200706@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <h4>GitHub</h4>
+                        <p>github.com/syhoang200706</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+84 342 888 212</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send me a message</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="mailto:syhoang200706@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/syhoang200706" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="tel:+840342888212"><i class="fas fa-phone"></i></a>
+        </div>
+        <p>© 2025 LEMOSHY GHOAN. All rights reserved.</p>
+        <p>Fullstack Developer | Portfolio</p>
+    </footer>
+
+    <script src="https://lib.youware.com/youware-lib-editor.1752562065.js" id="yourware-lib"></script>
     <script src="script.js"></script>
 </body>
 </html>
