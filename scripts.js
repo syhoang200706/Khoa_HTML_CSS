@@ -70,7 +70,7 @@ function createParticle() {
     particle.style.width = particle.style.height = Math.random() * 4 + 2 + 'px';
     particle.style.animationDuration = Math.random() * 3 + 2 + 's';
     document.body.appendChild(particle);
-    
+
     setTimeout(() => {
         particle.remove();
     }, 5000);
