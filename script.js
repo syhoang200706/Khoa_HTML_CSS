@@ -5,6 +5,7 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -27,6 +28,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+
 window.addEventListener('scroll', () => {
     const scrollIndicator = document.getElementById('scrollIndicator');
     const scrollTop = window.pageYOffset;
@@ -38,13 +40,14 @@ window.addEventListener('scroll', () => {
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        header.style.background = 'linear-gradient(45deg, #4DB6AC, #90CAF9)';
+        header.style.boxShadow = '0 2px 20px rgba(77, 182, 172, 0.2)';
     } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.background = 'var(--gradient-1)';
         header.style.boxShadow = 'none';
     }
 });
+
 
 const observerOptions = {
     threshold: 0.1,
@@ -63,20 +66,33 @@ document.querySelectorAll('.skill-card, .timeline-item, .project-card, .contact-
     observer.observe(el);
 });
 
+
 function createParticle() {
     const particle = document.createElement('div');
     particle.className = 'particle';
     particle.style.left = Math.random() * 100 + 'vw';
-    particle.style.width = particle.style.height = Math.random() * 4 + 2 + 'px';
-    particle.style.animationDuration = Math.random() * 3 + 2 + 's';
+    
+    const size = Math.random() * 4 + 2;
+    particle.style.width = particle.style.height = size + 'px';
+    
+    particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+    
+    const colors = ['#4DB6AC', '#90CAF9', '#FF8A80', '#F8BBD0', '#A7FFEB'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    particle.style.background = randomColor;
+    particle.style.boxShadow = `0 0 ${size * 2}px ${randomColor}`;
+    
+    particle.style.opacity = Math.random() * 0.6 + 0.2;
+    
     document.body.appendChild(particle);
-
+    
     setTimeout(() => {
         particle.remove();
     }, 5000);
 }
 
-setInterval(createParticle, 300);
+setInterval(createParticle, 200);
+
 
 setInterval(() => {
     const typewriter = document.querySelector('.typewriter');
@@ -90,6 +106,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
     e.preventDefault();
     alert('Cảm ơn bạn đã liên hệ! Tôi sẽ phản hồi sớm nhất có thể.');
 });
+
 
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset;
@@ -112,6 +129,7 @@ if (currentHour < 12) {
 }
 
 document.querySelector('.hero h1').textContent = greeting;
+
 
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';
